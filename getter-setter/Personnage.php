@@ -43,9 +43,9 @@ class Personnage
      * @param string $name Nom du personnage
      * @return object
      */
-    public function setName(string $name)
+    private function setName(string $name)
     {
-        $this->name = $name;
+        $this->name = Utils::myUcfirst($name);
         return $this;
     }
 
@@ -65,7 +65,7 @@ class Personnage
      * @param int $age Age du personnage
      * @return object
      */
-    public function setAge(int $age)
+    private function setAge(int $age)
     {
         $this->age = $age;
         return $this;
@@ -101,6 +101,13 @@ class Personnage
     public function getShirtColor()
     {
         return $this->shirtColor;
+    }
+
+
+
+    public function attack(Personnage $opponent)
+    {
+        echo $opponent->getName();
     }
 
 }
