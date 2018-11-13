@@ -62,6 +62,18 @@ class Voiture
     /**
      * CONSTRUCTOR
      */
+    public function __construct(string $brand, string $model, string $color, string $driver = "")
+    {
+        $this->brand = $brand;
+        $this->model = $model;
+        $this->color = $color;
+        $this->driver = $driver;
+
+        if (!empty($this->driver)) 
+        {
+            $this->hasDriver = true;
+        }
+    }
 
 
     /**
@@ -78,6 +90,9 @@ class Voiture
         if (!$this->isStarted && $this->hasDriver) 
         {
             $this->isStarted = true;
+        }
+        else {
+            exit("La voiture $this->brand ne peut pas démarrer.");
         }
     }
 
