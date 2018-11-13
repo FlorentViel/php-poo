@@ -143,7 +143,7 @@ class Voiture
             $this->decelerate(29);
         }
 
-        return "On tourne à ".$direction;
+        echo "On tourne à ".$direction."<br>";
     }
 
     /**
