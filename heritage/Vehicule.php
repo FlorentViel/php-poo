@@ -28,6 +28,8 @@ abstract class Vehicule
             $this->setHasDriver(true);
         }
     }
+    
+    abstract public function FunctionName();
 
     /**
      * SETTER / GETTER

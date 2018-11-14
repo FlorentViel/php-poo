@@ -1,0 +1,8 @@
+Projet WPO
+
+> Créer et afficher des :
+    - Articles
+    - Pages
+    - Pages de documentation
+
+
