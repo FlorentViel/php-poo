@@ -4,5 +4,17 @@ Projet WPO
     - Articles
     - Pages
     - Pages de documentation
+    - Utilisateur
 
+- Titre
+- Permalien (slug)
+- Contenu
+- Auteur
+- Date de création
+- Date de publication
+- Categories
+- Mots clés
+- Type (article / page / documentation)
 
+- Nom
+- Prenom
