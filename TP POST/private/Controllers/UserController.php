@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-class User {
+class UserController {
     private $firstname;
     private $lastname;
     private $email;

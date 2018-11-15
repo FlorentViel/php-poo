@@ -2,7 +2,7 @@
 
 namespace Controllers;
 
-abstract class Post {
+abstract class PostController {
     private $title;
     private $slug;
     private $content;
