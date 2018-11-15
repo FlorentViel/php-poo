@@ -7,17 +7,11 @@ use \Models\ArticleModel;
 class ArticleController extends PostController {
     const TYPE = "article";
 
-    // Propriétés $articles
-    // Tableau de la liste des articles
-    private $articles = [];
-
     private $model;
 
     public function __construct()
     {
         $this->model = new ArticleModel;
-
-        // var_dump( $this->model->getAll() );
     }
 
     /**
@@ -25,8 +19,11 @@ class ArticleController extends PostController {
      */
     public function viewAll()
     {
-        foreach ($this->articles as $article) {
-
+        foreach ($this->model->getAll() as $article) {
+            echo "<h3>".$article->title."</h3>";
+            echo "<div>slug : ".$article->slug."</div>";
+            echo "<div>".$article->content."</div>";
+            echo "<hr>";
         }
     }
 }

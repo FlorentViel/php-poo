@@ -9,8 +9,6 @@ class ArticleModel
 
     public function __construct()
     {
-        $this->getTable();
-
         // Instance de PDO
         try {
             $this->db = new \PDO("mysql:dbname=wp_diw10;host=127.0.0.1", "root", "myosw3sql", [
@@ -47,8 +45,8 @@ class ArticleModel
     // List / Retrieve All
     public function getAll()
     {
-        $query = $this->db->query("SELECT * FROM article");
-        return $query->fetchAll();
+        $query = $this->db->query("SELECT * FROM ".$this->getTable());
+        return $query->fetchAll(\PDO::FETCH_OBJ);
     }
 
     // C - Create - Insert
@@ -57,17 +55,17 @@ class ArticleModel
     }
 
     // R - Read /Retrieve One
-    public function getOne()
+    public function getOne(int $id)
     {
     }
 
     // U - Update
-    public function update()
+    public function update(int $id)
     {
     }
 
     // D - Delete
-    public function delete()
+    public function delete(int $id)
     {
     }
 }
