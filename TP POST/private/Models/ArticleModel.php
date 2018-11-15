@@ -2,7 +2,6 @@
 
 namespace Models;
 
-
-class Article {
+class ArticleModel {
     
 }

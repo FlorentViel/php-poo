@@ -2,6 +2,6 @@
 
 namespace Controllers;
 
-class Article extends Post {
+class ArticleController extends Post {
     const TYPE = "article";
 }

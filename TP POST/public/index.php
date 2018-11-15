@@ -12,9 +12,9 @@ function autoload_models($class) {
 spl_autoload_register('autoload_models');
 
 
-use \Controllers\Article;
+use \Controllers\ArticleController;
 use \Controllers\User;
-use \Models\Article;
+use \Models\ArticleModel;
 
 
 // Prépare un tableau pour afficher (plus tard) tous les articles
@@ -27,7 +27,7 @@ $articles = [];
 $user_1 = new User("Clark", "KENT");
 
 // Création de l'article 1
-$article_1 = new Article();
+$article_1 = new ArticleController();
 $article_1
     ->setTitle("Mon premier article avec PHP Objet")
     ->setContent("Lorem ipsum, bla bla bla....")
@@ -35,7 +35,7 @@ $article_1
 array_push($articles, $article_1);
 
 // Création de l'article 2
-$article_2 = new Article();
+$article_2 = new ArticleController();
 $article_2->setTitle("C'est l'heure d'envoyer ta lettre au père Noël.");
 $article_2->setContent("Lorem ipsum, bla bla bla....");
 $article_2->setUser($user_1->getFirstname()." ".$user_1->getLastname());
