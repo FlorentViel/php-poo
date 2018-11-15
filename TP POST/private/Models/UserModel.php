@@ -4,4 +4,4 @@ namespace Models;
 
 use \Models\Model;
 
-class ArticleModel extends Model {}
+class UserModel extends Model {}

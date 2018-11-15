@@ -19,6 +19,9 @@ use \Controllers\UserController as User;
 $articles = new Article;
 $articles->viewAll();
 
+$user = new User;
+$user->viewAll();
+
 // // Prépare un tableau pour afficher (plus tard) tous les articles
 // $articles = [];
 

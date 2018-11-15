@@ -2,95 +2,24 @@
 
 namespace Controllers;
 
+use \Models\UserModel;
+
 class UserController {
-    private $firstname;
-    private $lastname;
-    private $email;
-    private $passwd;
 
-    public function __construct(string $firstname, string $lastname)
+    private $model;
+
+    public function __construct()
     {
-        $this->setFirstname($firstname);
-        $this->setLastname($lastname);
+        $this->model = new UserModel;
     }
 
-    /**
-     * Get the value of lastname
-     */ 
-    public function getLastname()
+    public function viewAll()
     {
-        return $this->lastname;
+        foreach ($this->model->getAll() as $user) {
+            echo "<div>".$user->firstname."</div>";
+            echo "<div>".$user->lastname."</div>";
+            echo "<hr>";
+        }
     }
-
-    /**
-     * Set the value of lastname
-     *
-     * @return  self
-     */ 
-    public function setLastname($lastname)
-    {
-        $this->lastname = $lastname;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of firstname
-     */ 
-    public function getFirstname()
-    {
-        return $this->firstname;
-    }
-
-    /**
-     * Set the value of firstname
-     *
-     * @return  self
-     */ 
-    public function setFirstname($firstname)
-    {
-        $this->firstname = $firstname;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of email
-     */ 
-    public function getEmail()
-    {
-        return $this->email;
-    }
-
-    /**
-     * Set the value of email
-     *
-     * @return  self
-     */ 
-    public function setEmail($email)
-    {
-        $this->email = $email;
-
-        return $this;
-    }
-
-    /**
-     * Get the value of passwd
-     */ 
-    public function getPasswd()
-    {
-        return $this->passwd;
-    }
-
-    /**
-     * Set the value of passwd
-     *
-     * @return  self
-     */ 
-    public function setPasswd($passwd)
-    {
-        $this->passwd = $passwd;
-
-        return $this;
-    }
+    
 }
