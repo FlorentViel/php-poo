@@ -1,9 +1,20 @@
 <?php
 function autoload_controllers($class) {
-    include_once '../private/controllers/'.$class . '.php';
+    $class = preg_replace("/\\\/", "/", $class);
+    include_once '../private/'.$class . '.php';
 }
 spl_autoload_register('autoload_controllers');
 
+function autoload_models($class) {
+    $class = preg_replace("/\\\/", "/", $class);
+    include_once '../private/'.$class . '.php';
+}
+spl_autoload_register('autoload_models');
+
+
+use \Controllers\Article;
+use \Controllers\User;
+use \Models\Article;
 
 
 // Prépare un tableau pour afficher (plus tard) tous les articles

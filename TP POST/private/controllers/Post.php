@@ -1,5 +1,7 @@
 <?php
 
+namespace Controllers;
+
 abstract class Post {
     private $title;
     private $slug;

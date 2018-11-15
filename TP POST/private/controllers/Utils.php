@@ -1,5 +1,7 @@
 <?php
 
+namespace Controllers;
+
 class Utils {
     public static function slugify($text)
     {
